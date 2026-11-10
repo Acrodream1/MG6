@@ -1,2 +1,5 @@
 # MG6
 
+## Devlog
+1. If I write a for loop inside of the Update method, I believe that the for loop will complete before the update method finishes. Therefore, if a for loop is performing heavy tasks, it may cause the game to lag because it is trying to finish up each for loop. I remember that the Update method has something to do with frames. If it is at 60fps, then Update will run 60 times. A large loop will lag the game, causing fps drops and decreased update.
+2. While I don't answer the devlog questions until after adding the features, I think that the premade code checks for the "Platform" tag to allow the player to stand. The problem with this is that the "Platform" tag is similarly treated as ground, which is why the cat collision must be disabled to allow the player to clip through the platform.

@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Cat : MonoBehaviour
@@ -64,7 +65,19 @@ public class Cat : MonoBehaviour
         //      collider.
         // You might want to check the Rigidbody2D scripting documentation
         //      for a useful variable :)
-        
+
+        if (_rigidbody.linearVelocityY > 0)
+        {
+            _collider.enabled = false;
+        } else
+        {
+            _collider.enabled = true;
+        }
+
+        if (_rigidbody.position.y >= 14 || _rigidbody.position.y <= -3.2 || _rigidbody.position.x < -6.5 || _rigidbody.position.x > 10.5)
+        {
+            _rigidbody.transform.position = new Vector3(2f, 2.63f, 0);
+        }
 
         
         // STEP 1 -------------------------------------------------------------
